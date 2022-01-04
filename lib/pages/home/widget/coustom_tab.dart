@@ -4,10 +4,12 @@ class CoustomTab extends StatelessWidget {
   final int selected;
   final Function callback;
 
-  const CoustomTab(this.callback, this.selected, {Key? key}) : super(key: key);
+  const CoustomTab(this.selected, this.callback, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text("custom text"),
+    );
   }
 }

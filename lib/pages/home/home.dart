@@ -1,4 +1,5 @@
 import 'package:bookapp/constants/color.dart';
+import 'package:bookapp/pages/home/widget/coustom_tab.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,6 +17,16 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _buildAppbar(),
+      body: Column(
+        children: [
+          CoustomTab(tabIndex, (int index) {
+            setState(() {
+              tabIndex = index;
+            });
+            pagecontroller.jumpToPage(index);
+          }),
+        ],
+      ),
     );
   }
 
