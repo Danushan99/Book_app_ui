@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
             setState(() {
               tabIndex = index;
             });
-            pagecontroller.jumpToPage(index);
+            // pagecontroller.jumpToPage(index);
           }),
         ],
       ),
@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
       actions: [
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.search_outlined),
+          icon: const Icon(Icons.search_outlined),
           color: nfont,
         )
       ],
