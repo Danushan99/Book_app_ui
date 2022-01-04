@@ -19,11 +19,22 @@ class _HomePageState extends State<HomePage> {
 
   AppBar _buildAppbar() {
     return AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.menu_rounded),
-            color: nfont));
+      centerTitle: true,
+      backgroundColor: Colors.white,
+      elevation: 0,
+      leading: IconButton(
+          onPressed: () {}, icon: const Icon(Icons.menu_rounded), color: nfont),
+      title: const Text(
+        "MyBooks",
+        style: TextStyle(color: nfont, fontSize: 18),
+      ),
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.search_outlined),
+          color: nfont,
+        )
+      ],
+    );
   }
 }
