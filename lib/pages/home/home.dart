@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
       leading: IconButton(
           onPressed: () {}, icon: const Icon(Icons.menu_rounded), color: nfont),
       title: const Text(
-        "MyBooks",
+        "My Books",
         style: TextStyle(color: nfont, fontSize: 18),
       ),
       actions: [
