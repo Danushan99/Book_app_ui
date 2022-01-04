@@ -9,6 +9,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var tabIndex = 0;
+  final pagecontroller = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
