@@ -1,4 +1,5 @@
 import 'package:bookapp/constants/color.dart';
+import 'package:bookapp/pages/home/widget/coustom_tab.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,11 +10,23 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var tabIndex = 0;
+  final pagecontroller = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _buildAppbar(),
+      body: Column(
+        children: [
+          CoustomTab(tabIndex, (int index) {
+            setState(() {
+              tabIndex = index;
+            });
+            // pagecontroller.jumpToPage(index);
+          }),
+        ],
+      ),
     );
   }
 
@@ -31,7 +44,7 @@ class _HomePageState extends State<HomePage> {
       actions: [
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.search_outlined),
+          icon: const Icon(Icons.search_outlined),
           color: nfont,
         )
       ],
