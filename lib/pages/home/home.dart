@@ -28,6 +28,13 @@ class _HomePageState extends State<HomePage> {
         "MyBooks",
         style: TextStyle(color: nfont, fontSize: 18),
       ),
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.search_outlined),
+          color: nfont,
+        )
+      ],
     );
   }
 }
