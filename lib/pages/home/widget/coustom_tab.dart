@@ -1,3 +1,4 @@
+import 'package:bookapp/constants/color.dart';
 import 'package:flutter/material.dart';
 
 class CoustomTab extends StatelessWidget {
@@ -29,7 +30,10 @@ class CoustomTab extends StatelessWidget {
                   margin: const EdgeInsets.symmetric(vertical: 5),
                   alignment: Alignment.center,
                   width: (width - 40) / 2 - 10,
-                  child: Text(tabs[index]),
+                  child: Text(
+                    tabs[index],
+                    style: TextStyle(color: nfont, fontWeight: FontWeight.w500),
+                  ),
                 ),
               ),
           separatorBuilder: (_, index) => const SizedBox(
