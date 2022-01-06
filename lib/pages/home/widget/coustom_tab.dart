@@ -32,7 +32,7 @@ class CoustomTab extends StatelessWidget {
                   width: (width - 40) / 2 - 10,
                   child: Text(
                     tabs[index],
-                    style: TextStyle(color: nfont, fontWeight: FontWeight.w500),
+                    style: const TextStyle(color: nfont, fontWeight: FontWeight.w500),
                   ),
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:bookapp/constants/color.dart';
+import 'package:bookapp/pages/home/widget/book_view.dart';
 import 'package:bookapp/pages/home/widget/coustom_tab.dart';
 import 'package:flutter/material.dart';
 
@@ -23,8 +24,17 @@ class _HomePageState extends State<HomePage> {
             setState(() {
               tabIndex = index;
             });
-            // pagecontroller.jumpToPage(index);
+            //pagecontroller.jumpToPage(index);
           }),
+          Expanded(
+            child: book_view(
+              tabIndex,
+              pagecontroller,
+              (int index) => setState(() {
+                tabIndex = index;
+              }),
+            ),
+          ),
         ],
       ),
     );
